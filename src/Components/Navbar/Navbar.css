@@ -1,0 +1,12 @@
+
+  .navbar-collapse .collapse{
+  height: 90px;
+  justify-content: space-between;
+}
+.navbar-collapse .collapse.NavItem{
+  margin: 70px;
+}
+.navbar-collapse .collapse.brandText{
+color: white;
+}
+  
