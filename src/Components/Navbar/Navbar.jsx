@@ -15,7 +15,7 @@ const NavBarImport = () => {
     
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container fluid>
-          <Navbar.Brand href="#home">Diego</Navbar.Brand>
+          <Navbar.Brand href="#home">Flores Baires</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
