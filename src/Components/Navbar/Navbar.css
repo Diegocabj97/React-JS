@@ -1,12 +1,10 @@
-
-  .navbar-collapse .collapse{
+.navbar-collapse .collapse {
   height: 90px;
   justify-content: space-between;
 }
-.navbar-collapse .collapse.NavItem{
+.navbar-collapse .collapse.NavItem {
   margin: 70px;
 }
-.navbar-collapse .collapse.brandText{
-color: white;
+.navbar-collapse .collapse.brandText {
+  color: white;
 }
-  

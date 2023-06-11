@@ -1,0 +1,42 @@
+
+.containerIndex {
+    display: flex;
+    background-color: rgb(236, 234, 234);
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+  }
+  .containerIndex p {
+    border: solid 1px grey;
+    border-radius: 50px;
+    width: 100%;
+  }
+  .containerIndex div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+  }
+  .containerIndex div b {
+    width: 100%;
+    font-size: 28px;
+  }
+  .containerIndex h3 {
+    color: rgb(1, 120, 255);
+  }
+  .containerIndex h3 i {
+    color: rgb(1, 120, 255);
+  }
+  .containerIndex span {
+    color: rgb(1, 120, 255);
+    font-size: 28px;
+  }
+  .containerIndex span i {
+    color: rgb(1, 120, 255);
+    font-size: 28px;
+  }
