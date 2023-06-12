@@ -1,20 +1,26 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+
+import { Link } from "react-router-dom";
 import "./card.css"
 
-function card({data})  {
+function cards({product})  {
   return (
+    <div>
+    <Link to={`/detail/${product.id}`}>
     <Card>
-      <Card.Img variant="top" src={data.imagen} />
+      <Card.Img className='cardImg' variant="top" src={product.imagen} />
       <Card.Body>
-        <Card.Title>{data.nombre}</Card.Title>
+        <Card.Title>{product.nombre}</Card.Title>
         <Card.Text>
-          {data.descripcion}
+          {product.descripcion}
         </Card.Text>
         <Button variant="primary">Comprar</Button>
       </Card.Body>
     </Card>
+    </Link>
+    </div>
   );
 }
 
-export default card;
+export default cards;

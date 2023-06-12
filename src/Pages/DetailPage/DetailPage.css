@@ -1,0 +1,16 @@
+
+ProductSpecs {
+    display: flex;
+    justify-content: space-around;
+}
+.CardDetail{
+  
+   max-height: 400px;
+}
+.CardDetail img{
+    margin: auto;
+  min-height: 150px;
+  max-height: 200px;
+  max-width: 200px;
+  min-width: 150px;
+}

@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react";
-import Card from "../card/card.jsx";
+import Cards from "../card/card.jsx";
+
 import "./CardList.css";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 const CardList = () => {
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
     fetch("./Productos.json")
       .then((response) => response.json())
-      .then((data) => setProducts(data));
+      .then((product) => setProducts(product));
   }, []);
   return (
-    <div className="Cards-List">
+    <Container className="Cards-List">
       {products.map((product) => {
         return (
           <div key={product.id}>
             <Link to={`/detail/${product.id}`}>
-              <Card data={product} />
+              <Cards product={product} />
             </Link>
           </div>
         );
       })}
-    </div>
+    </Container>
   );
 };
 

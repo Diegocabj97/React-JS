@@ -1,0 +1,10 @@
+.CategoryItems{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.CategoryItems .card{
+    max-width: fit-content;
+    max-height: fit-content;
+    min-height: 80%;
+}

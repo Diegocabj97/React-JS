@@ -11,57 +11,57 @@
   },
   {
     "id": "2",
-    "nombre": "Logitech G703",
+    "nombre": "Mouse Logitech G703",
     "imagen": "/src/assets/img/Mouse1.jpeg",
     "precioAnterior": 22000,
     "precio": 19000,
-    "descripcion": "Mouse Gamer Logitech G703",
+    "descripcion": "Mouse Gamer Logitech G703 inalambrico",
     "categoria": "Mouses"
   },
   {
     "id": "3",
-    "nombre": "Nvidia RTX 3060",
+    "nombre": "Placa de video EVGA Nvidia RTX 3060",
     "imagen": "/src/assets/img/nvidia3060.jpg",
     "precioAnterior": 208000,
     "precio": 168000,
-    "descripcion": "La mas potente y buscada del mercado",
-    "categoria": "Placas de video"
+    "descripcion": "Placa de video EVGA Nvidia RTX 3060",
+    "categoria": "VideoCards"
   },
   {
     "id": "4",
-    "nombre": "Nvidia RTX 3080",
+    "nombre": "Placa de video EVGA Nvidia RTX 3080",
     "imagen": "/src/assets/img/nvidia3060.jpg",
     "precioAnterior": 340000,
     "precio": 260000,
-    "descripcion": "La mas potente y buscada del mercado",
-    "categoria": "Placas de video"
+    "descripcion": "Placa de video EVGA Nvidia RTX 3080",
+    "categoria": "VideoCards"
   },
   {
     "id": "5",
-    "nombre": "Nvidia RTX 3090",
+    "nombre": "Placa de video EVGA Nvidia RTX 3090",
     "imagen": "/src/assets/img/nvidia3060.jpg",
     "precioAnterior": 525000,
     "precio": 425000,
-    "descripcion": "La mas potente y buscada del mercado",
-    "categoria": "Placas de video"
+    "descripcion": "Placa de video EVGA Nvidia RTX 3090",
+    "categoria": "VideoCards"
   },
   {
     "id": "6",
-    "nombre": "Fuente EVGA 850W",
+    "nombre": "Fuente de poder EVGA 850W",
     "imagen": "/src/assets/img/EVGA.png",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "La fuente favorita de muchos",
+    "descripcion": "Fuente de poder EVGA 850 Watts 80 Plus Gold",
     "categoria": "Fuentes de poder"
   },
   {
     "id": "7",
-    "nombre": "RTX 2060 6Gb",
+    "nombre": "Placa de video RTX 2060 6Gb",
     "imagen": "/src/assets/img/Carousel/placadevideo2.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
     "descripcion": "Placa De Video GeForce RTX 2060 6Gb Colorful",
-    "categoria": "Placas de video"
+    "categoria": "VideoCards"
   },
   {
     "id": "8",
@@ -69,25 +69,25 @@
     "imagen": "/src/assets/img/Carousel/ram1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Memoria Ram DDR4 - 8Gb 3200 Mhz Kingston Fury Beast Rgb",
+    "descripcion": "Kingston Fury Rgb DDR4-8Gb 3200 Mhz",
     "categoria": "Memorias Ram"
   },
   {
     "id": "9",
-    "nombre": "GeForce RTX 3090 24Gb",
+    "nombre": "Placa de video GeForce RTX 3090 24Gb",
     "imagen": "/src/assets/img/Carousel/placadevideo3.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Placa De Video GeForce RTX 3090 24Gb Evga FTW3 Ultra",
-    "categoria": "Placas de video"
+    "descripcion": "GeForce RTX 3090 24Gb Evga Ultra",
+    "categoria": "VideoCards"
   },
   {
     "id": "10",
-    "nombre": "Ssd M2 Pci-E 1Tb Kingston Fury",
+    "nombre": "Disco Solido Kingston Fury",
     "imagen": "/src/assets/img/Carousel/disco1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Disco Solido Ssd M2 Pci-E 1Tb Kingston Fury Renegade",
+    "descripcion": "Disco SSD M.2 Pci-E 1Tb Kingston Fury Renegade",
     "categoria": "Almacenamiento"
   },
   {
@@ -96,16 +96,16 @@
     "imagen": "/src/assets/img/Carousel/fuente1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Fuente Thermaltake TR2 600W",
+    "descripcion": "Fuente de poder Thermaltake TR2 600W ",
     "categoria": "Fuentes de poder"
   },
   {
     "id": "12",
-    "nombre": "Samsung LS27BG400ELX 240Hz 27",
+    "nombre": "Monitor Samsung  240Hz 27''",
     "imagen": "/src/assets/img/Carousel/monitor 10.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Monitor Gamer 27 Samsung Plano G4 240Hz 1Ms LS27BG400ELX",
+    "descripcion": "Monitor 27''Samsung Plano G4 240Hz 1Ms",
     "categoria": "Monitores"
   },
   {
@@ -123,8 +123,8 @@
     "imagen": "/src/assets/img/Carousel/cpu3.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Placa De Video Radeon RX 6900 XT 16Gb Gigabyte Gaming OC",
-    "categoria": "Placas de video"
+    "descripcion": "Radeon RX 6900 XT 16Gb Gigabyte Gaming OC",
+    "categoria": "VideoCards"
   },
   {
     "id": "15",
@@ -137,11 +137,11 @@
   },
   {
     "id": "16",
-    "nombre": "Redragon K552W Kumara Rgb Blanco",
+    "nombre": "Redragon K552W Kumara",
     "imagen": "/src/assets/img/Carousel/Teclado1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
-    "descripcion": "Teclado Gamer Redragon K552W Kumara Rgb Blanco Switch Azul",
+    "descripcion": "Teclado Redragon Kumara Rgb Blanco Switch Azul",
     "categoria": "Teclados"
   },
   {

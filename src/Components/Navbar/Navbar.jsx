@@ -23,9 +23,15 @@ const NavBarImport = ({greeting}) => {
               Productos
             </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/Offers">
+           
+           <LinkContainer to="/Category/VideoCards">
             <Nav.Link className="NavItem">
-              Ofertas
+            Placas de video
+            </Nav.Link>
+           </LinkContainer>
+           <LinkContainer to="/Category/Mouses">
+            <Nav.Link className="NavItem">
+            Mouses
             </Nav.Link>
            </LinkContainer>
           </Nav>

@@ -1,13 +1,13 @@
 import React from "react";
-import CardList from "/src/Components/cardList/cardList.jsx";
-
+import CardList from "../../Components/CardList/CardList";
+import "./ProductsPage.css"
 const ProductsPage = () => {
   return (
     <div>
+     
       <h2>Productos más buscados</h2>
-      <div className="Cards-Container">
-        <CardList />
-      </div>
+      <CardList />
+    
     </div>
   );
 };

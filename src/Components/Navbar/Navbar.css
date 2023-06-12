@@ -8,3 +8,7 @@
 .navbar-collapse .collapse.brandText {
   color: white;
 }
+.NavItem{
+  display: flex;
+  justify-content: space-around;
+}
