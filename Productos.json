@@ -1,3 +1,4 @@
+
 [
   {
     "id": "1",
@@ -142,8 +143,7 @@
     "precio": 26000,
     "descripcion": "Teclado Gamer Redragon K552W Kumara Rgb Blanco Switch Azul",
     "categoria": "Teclados"
-  }
-  ,
+  },
   {
     "id": "17",
     "nombre": "Mouse Gamer Galax Slider",
@@ -152,8 +152,7 @@
     "precio": 26000,
     "descripcion": "Mouse Gamer Galax Slider 01 Rgb 7200 Dpi",
     "categoria": "Mouses"
-  }
-  ,
+  },
   {
     "id": "18",
     "nombre": "Ryzen 5 5600g",
@@ -162,8 +161,7 @@
     "precio": 26000,
     "descripcion": "Procesador Ryzen 5 5600g el mejor procesador del mercado mundial",
     "categoria": "Procesadores"
-  }
-  ,
+  },
   {
     "id": "19",
     "nombre": "Redragon M988 Rgb Storm Elite",

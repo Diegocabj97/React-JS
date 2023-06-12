@@ -1,5 +1,4 @@
 import React from "react";
-import "./assets/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import NavBarImport from "./Components/Navbar/Navbar.jsx";
@@ -9,10 +8,11 @@ import ContainerCarrito from "./Components/ContainerCarrito/ContainerCarrito";
 
 // Pages
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage.jsx";
-import Offers from "./Pages/Offers.jsx";
-import ProductsPage from "./Pages/ProductsPage.jsx";
-import Contact from "./Pages/Contact.jsx";
+import HomePage from "./Pages/HomePage/HomePage.jsx";
+import Offers from "./Pages/OffersPage/Offers.jsx";
+import ProductsPage from "./Pages/ProductsPage/ProductsPage.jsx";
+import Contact from "./Pages/Contact/Contact.jsx";
+import DetailPage from "./Pages/DetailPage/DetailPage";
 
 const App = () => {
   const [counter, setCounter] = React.useState(0);
@@ -33,12 +33,13 @@ const App = () => {
         <button onClick={counterDown}>Devolver</button>
         <p>Contador:{counter}</p>
         <ContainerIndex />
-        
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/ProductsPage" element={<ProductsPage />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Offers" element={<Offers />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
       </div>
     </Router>

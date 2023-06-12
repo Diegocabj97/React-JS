@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Card from "../card/card.jsx";
 import "./CardList.css";
+import { Link } from "react-router-dom";
 
 const CardList = () => {
   const [products, setProducts] = useState([]);
 
-  console.log("Productos", products);
 
   useEffect(() => {
     fetch("./Productos.json")
@@ -13,19 +13,17 @@ const CardList = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-   
-  <div className="Cards-List">
-    
-        {products.map((product) => {
-          return (
-            <div key={product.id}>
-              <Card data ={product}/>
-            </div>
-          );
-        })}
-  </div>
-    
-   
+    <div className="Cards-List">
+      {products.map((product) => {
+        return (
+          <div key={product.id}>
+            <Link to={`/detail/${product.id}`}>
+              <Card data={product} />
+            </Link>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 
