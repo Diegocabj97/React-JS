@@ -32,9 +32,7 @@ const App = () => {
         <ContainerCarrito></ContainerCarrito>
         <Header greeting="Flores Gamers!" />
 
-        <button onClick={counterUp}>Comprar</button>
-        <button onClick={counterDown}>Devolver</button>
-        <p>Contador:{counter}</p>
+        
         <ContainerIndex />
 
         <Routes>
