@@ -11,4 +11,8 @@
 .NavItem{
   display: flex;
   justify-content: space-around;
+  
+}
+.dropdown-menu{
+  background-color: rgba(66, 66, 66, 0.459);
 }

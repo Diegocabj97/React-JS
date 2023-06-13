@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 import "./DetailPage.css";
 import { useParams } from "react-router-dom";
 import Specs from "./Specs";
-import { Row } from "react-bootstrap";
 const DetailPage = () => {
   const [product, setProduct] = useState({});
   let { id } = useParams();
@@ -43,7 +42,8 @@ const DetailPage = () => {
         }}
       >
         <h1>Especificaciones del producto</h1>
-      
+
+        <p>{product.descripcion}</p>
       </div>
     </div>
   );

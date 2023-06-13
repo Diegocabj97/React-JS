@@ -32,7 +32,6 @@ const App = () => {
         <ContainerCarrito></ContainerCarrito>
         <Header greeting="Flores Gamers!" />
 
-        
         <ContainerIndex />
 
         <Routes>
