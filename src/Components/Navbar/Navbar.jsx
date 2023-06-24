@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -7,9 +7,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Navbar.css";
 import CartWidget from "../cart/CartWidget.jsx";
 import { LinkContainer } from "react-router-bootstrap";
-import Dropdown from "react-bootstrap/Dropdown";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { Card } from "react-bootstrap";
 
-const NavBarImport = ({ greeting }) => {
+const NavBarImport = ({ greeting, counter, setCounter }) => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container fluid>
@@ -52,7 +54,7 @@ const NavBarImport = ({ greeting }) => {
               <Nav.Link className="NavItem">Soporte Técnico</Nav.Link>
             </NavDropdown>
 
-            <CartWidget />
+            <CartWidget counter={counter} setCounter={setCounter} />
           </Nav>
         </Navbar.Collapse>
       </Container>

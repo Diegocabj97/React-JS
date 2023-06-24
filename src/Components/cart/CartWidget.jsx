@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import "./CartWidget.css";
 
-const CartWidget = () => {
+const CartWidget = ({counter}) => {
   return (
     <Container className="container-icon">
       <div className="container-cart-icon">
@@ -22,7 +22,7 @@ const CartWidget = () => {
         </svg>
 
         <div className="count-products">
-          <span id="contador-productos">3</span>
+          <span id="contador-productos">{counter}</span>
         </div>
       </div>
     </Container>

@@ -1,12 +1,12 @@
 import React from "react";
 import CardList from "../../Components/CardList/CardList";
 import "./ProductsPage.css"
-const ProductsPage = () => {
+const ProductsPage = ({counter,setCounter,counterUp}) => {
   return (
     <div>
      
       <h2>Productos más buscados</h2>
-      <CardList />
+      <CardList counter={counter} setCounter={setCounter} counterUp={counterUp} />
     
     </div>
   );

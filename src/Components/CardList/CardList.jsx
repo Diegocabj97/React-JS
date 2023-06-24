@@ -5,7 +5,7 @@ import "./CardList.css";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
-const CardList = () => {
+const CardList = ({ counter, setCounter, counterUp }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,12 @@ const CardList = () => {
         return (
           <div key={product.id}>
             <Link to={`/detail/${product.id}`}>
-              <Cards product={product} />
+              <Cards
+                counter={counter}
+                setCounter={setCounter}
+                counterUp={counterUp}
+                product={product}
+              />
             </Link>
           </div>
         );
