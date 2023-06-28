@@ -14,5 +14,8 @@
   
 }
 .dropdown-menu{
-  background-color: rgba(66, 66, 66, 0.459);
+  background-color: rgba(82, 78, 78, 0.767);
+}
+.SearchBtn{
+  margin: 5px;
 }

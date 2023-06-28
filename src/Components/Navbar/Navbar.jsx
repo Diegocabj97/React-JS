@@ -7,11 +7,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Navbar.css";
 import CartWidget from "../cart/CartWidget.jsx";
 import { LinkContainer } from "react-router-bootstrap";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { Card } from "react-bootstrap";
+import SearchForm from "./SearchForm.jsx";
 
-const NavBarImport = ({ greeting, counter, setCounter }) => {
+const NavBarImport = ({ greeting, onSearch, counter, setCounter, value }) => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container fluid>
@@ -31,16 +29,35 @@ const NavBarImport = ({ greeting, counter, setCounter }) => {
               id="collasible-nav-dropdown"
               bg="dark"
             >
+              <LinkContainer to="/Category/Procesadores">
+                <Nav.Link className="NavItem">Procesadores</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/Category/VideoCards">
                 <Nav.Link className="NavItem">Placas de video</Nav.Link>
               </LinkContainer>
+              <LinkContainer to="/Category/Monitores">
+                <Nav.Link className="NavItem">Monitores</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/Category/Auriculares">
+                <Nav.Link className="NavItem">Auriculares</Nav.Link>
+              </LinkContainer>
 
+              <LinkContainer to="/Category/Almacenamiento">
+                <Nav.Link className="NavItem">Almacenamiento</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/Category/Fuentes de poder">
+                <Nav.Link className="NavItem">Fuentes de poder</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/Category/Teclados">
+                <Nav.Link className="NavItem">Teclados</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/Category/Mouses">
                 <Nav.Link className="NavItem">Mouses</Nav.Link>
               </LinkContainer>
             </NavDropdown>
           </Nav>
           <Nav>
+            <SearchForm value={value} onSearch={onSearch} />
             <NavDropdown
               className="dropdown"
               title="Contacto"

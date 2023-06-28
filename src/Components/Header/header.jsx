@@ -1,15 +1,9 @@
+import "./header.css";
 
-import "./header.css"
-
-const header = ({greeting}) => {
+const header = ({ greeting }) => {
   return (
-    <header
-      className="headerIndex"
-      style={{
-        
-      }}
-    >
-      Bienvenidos a {greeting}
+    <header className="headerIndex">
+      <h3>Bienvenidos a Flores Gamers</h3>
     </header>
   );
 };

@@ -24,9 +24,29 @@ import Contact from "./Pages/Contact/Contact.jsx";
 import DetailPage from "./Pages/DetailPage/DetailPage";
 import ErrorPage from "./Pages/ErrorPage";
 import Category from "./Pages/Category/Category";
+import SearchPage from "./Pages/SearchPage/SearchPage";
 
 const App = () => {
-  
+  const [products, setProducts] = useState([]);
+
+  const handleSearch = (searchText) => {
+    if (searchText) {
+      fetch("./Productos.json")
+        .then((response) => response.json())
+        .then((products) => {
+          const filteredProducts = products.filter(
+            (product) => product.nombre && product.nombre.includes(searchText)
+          );
+          console.log("Productos filtrados:", filteredProducts);
+          setProducts(filteredProducts);
+        })
+        .catch((error) => {
+          console.error("Error al obtener los productos:", error);
+        });
+    } else {
+      setProducts([]);
+    }
+  };
   const [counter, setCounter] = useState(0);
   const counterUp = () => {
     setCounter(counter + 1);
@@ -41,15 +61,16 @@ const App = () => {
           counter={counter}
           setCounter={setCounter}
           greeting="Flores Gamers"
+          onSearch={handleSearch}
         />
 
         <ContainerCarrito></ContainerCarrito>
         <Header greeting="Flores Gamers!" />
 
         <ContainerIndex />
-        
+
         <Routes>
-          <Route path="/" element={<HomePage counter={counter} counterUp={counterUp}/>} />
+          <Route path="/" element={<HomePage />} />
           <Route
             path="/ProductsPage"
             element={<ProductsPage counterUp={counterUp} />}
@@ -61,6 +82,10 @@ const App = () => {
           />
           <Route path="/Category/:categoryid" element={<Category />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route
+            path="/Search/:onSearch"
+            element={<SearchPage onSearch={handleSearch} />}
+          ></Route>
         </Routes>
       </div>
     </Router>
