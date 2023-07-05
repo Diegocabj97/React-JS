@@ -92,7 +92,7 @@
   },
   {
     "id": "11",
-    "nombre": "Thermaltake TR2 600W",
+    "nombre": "Fuente Thermaltake TR2 600W",
     "imagen": "/src/assets/img/Carousel/fuente1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
@@ -110,7 +110,7 @@
   },
   {
     "id": "13",
-    "nombre": "AMD Ryzen 7 5700G",
+    "nombre": "Procesador AMD Ryzen 7 5700G",
     "imagen": "/src/assets/img/Carousel/cpu3.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
@@ -119,7 +119,7 @@
   },
   {
     "id": "14",
-    "nombre": "Radeon RX 6900 XT",
+    "nombre": "Placa de video Radeon RX 6900 XT",
     "imagen": "/src/assets/img/Carousel/placadevideo3.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
@@ -128,7 +128,7 @@
   },
   {
     "id": "15",
-    "nombre": "HyperX Cloud Flight",
+    "nombre": "Auriculares HyperX Cloud Flight",
     "imagen": "/src/assets/img/Carousel/Auris1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
@@ -137,7 +137,7 @@
   },
   {
     "id": "16",
-    "nombre": "Redragon K552W Kumara",
+    "nombre": "Teclado Redragon K552W Kumara",
     "imagen": "/src/assets/img/Carousel/Teclado1.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,
@@ -155,7 +155,7 @@
   },
   {
     "id": "18",
-    "nombre": "Ryzen 5 5600g",
+    "nombre": "Procesador Ryzen 5 5600g",
     "imagen": "/src/assets/img/r55600g.jpg",
     "precioAnterior": 35000,
     "precio": 26000,
@@ -164,7 +164,7 @@
   },
   {
     "id": "19",
-    "nombre": "Redragon M988 Rgb Storm Elite",
+    "nombre": "Mouse Redragon M988 Rgb Storm Elite",
     "imagen": "/src/assets/img/Carousel/mouse2.jpeg",
     "precioAnterior": 35000,
     "precio": 26000,

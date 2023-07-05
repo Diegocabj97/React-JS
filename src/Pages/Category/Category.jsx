@@ -2,30 +2,27 @@ import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 import Cards from "../../Components/card/card";
-import './Category.css'
+import "./Category.css";
 import { Link } from "react-router-dom";
 import { auto } from "@popperjs/core";
+import { useContext } from "react";
+import { ProductsContext } from "../../Context/ProductsContext.jsx";
 
 const Category = () => {
-  const [product, setProduct] = useState([]);
+  const { products } = useContext(ProductsContext);
   let { categoryid } = useParams();
-  let filteredProducts = product.filter((item) => {
+  let filteredProducts = products.filter((item) => {
     return item.categoria === categoryid;
   });
-  useEffect(() => {
-    fetch(`/Productos.json`)
-      .then((response) => response.json())
-      .then((product) => setProduct(product));
-  }, [categoryid]);
 
   return (
     <div className="CategoryItems">
-      {filteredProducts.map((product) => {
+      {filteredProducts.map((products) => {
         return (
-        <Link to={`/detail/${product.id}`} key={product.id}>
-          <div>
-            <Cards product={product}></Cards>
-          </div>
+          <Link to={`/detail/${products.id}`} key={products.id}>
+            <div>
+              <Cards product={products}></Cards>
+            </div>
           </Link>
         );
       })}

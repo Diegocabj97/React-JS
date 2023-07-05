@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Cards from "../card/card.jsx";
-
+import { ProductsContext } from "../../Context/ProductsContext.jsx";
 import "./CardList.css";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 const CardList = ({ counter, setCounter, counterUp }) => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("./Productos.json")
-      .then((response) => response.json())
-      .then((product) => setProducts(product));
-  }, []);
+  const { products } = useContext(ProductsContext);
   return (
     <Container className="Cards-List">
       {products.map((product) => {

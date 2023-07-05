@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import "./DetailPage.css";
 import { useParams } from "react-router-dom";
 import Specs from "./Specs";
-const DetailPage = ({counterUp}) => {
+const DetailPage = () => {
   const [product, setProduct] = useState({});
   let { id } = useParams();
   useEffect(() => {
@@ -31,7 +31,7 @@ const DetailPage = ({counterUp}) => {
           <Card.Title>{product.nombre}</Card.Title>
 
           <Card.Text></Card.Text>
-          <Button onClick={counterUp} variant="primary">Comprar</Button>
+          <Button variant="primary">Comprar</Button>
         </Card.Body>
       </Card>
       <div

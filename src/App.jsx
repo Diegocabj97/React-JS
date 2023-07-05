@@ -13,7 +13,7 @@ import Header from "./Components/Header/header";
 import ContainerIndex from "./Components/ContainerIndex/ContainerIndex";
 import ContainerCarrito from "./Components/ContainerCarrito/ContainerCarrito";
 import Cards from "./Components/card/card.jsx";
-
+import { ProductsProvider } from "./Context/ProductsContext.jsx";
 import CardList from "./Components/CardList/CardList.jsx";
 
 // IMPORT PAGES
@@ -55,40 +55,42 @@ const App = () => {
     setCounter(counter - 1);
   };
   return (
-    <Router>
-      <div className="App">
-        <NavBarImport
-          counter={counter}
-          setCounter={setCounter}
-          greeting="Flores Gamers"
-          onSearch={handleSearch}
-        />
-
-        <ContainerCarrito></ContainerCarrito>
-        <Header greeting="Flores Gamers!" />
-
-        <ContainerIndex />
-
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route
-            path="/ProductsPage"
-            element={<ProductsPage counterUp={counterUp} />}
+    <ProductsProvider>
+      <Router>
+        <div className="App">
+          <NavBarImport
+            counter={counter}
+            setCounter={setCounter}
+            greeting="Flores Gamers"
+            onSearch={handleSearch}
           />
-          <Route path="/Contact" element={<Contact />} />
-          <Route
-            path="/Detail/:id"
-            element={<DetailPage counterUp={counterUp} />}
-          />
-          <Route path="/Category/:categoryid" element={<Category />} />
-          <Route path="*" element={<ErrorPage />} />
-          <Route
-            path="/Search/:onSearch"
-            element={<SearchPage onSearch={handleSearch} />}
-          ></Route>
-        </Routes>
-      </div>
-    </Router>
+
+          <ContainerCarrito></ContainerCarrito>
+          <Header greeting="Flores Gamers!" />
+
+          <ContainerIndex />
+
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/ProductsPage"
+              element={<ProductsPage counterUp={counterUp} />}
+            />
+            <Route path="/Contact" element={<Contact />} />
+            <Route
+              path="/Detail/:id"
+              element={<DetailPage counterUp={counterUp} />}
+            />
+            <Route path="/Category/:categoryid" element={<Category />} />
+            <Route path="*" element={<ErrorPage />} />
+            <Route
+              path="/Search/:onSearch"
+              element={<SearchPage onSearch={handleSearch} />}
+            ></Route>
+          </Routes>
+        </div>
+      </Router>
+    </ProductsProvider>
   );
 };
 

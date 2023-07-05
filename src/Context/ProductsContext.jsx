@@ -1,10 +1,10 @@
 import { useState, createContext } from "react";
 
-export const ItemsContext = createContext();
+export const ProductsContext = createContext();
 
-const itemsInStock = [
+const ProductsInStock = [
   {
-    id: "1",
+    id: 1,
     nombre: "Motherboard Asus Prime A320M-K",
     imagen: "/src/assets/img/mother1.jpeg",
     precioAnterior: 87000,
@@ -13,7 +13,7 @@ const itemsInStock = [
     categoria: "Motherboards",
   },
   {
-    id: "2",
+    id: 2,
     nombre: "Mouse Logitech G703",
     imagen: "/src/assets/img/Mouse1.jpeg",
     precioAnterior: 22000,
@@ -22,7 +22,7 @@ const itemsInStock = [
     categoria: "Mouses",
   },
   {
-    id: "3",
+    id: 3,
     nombre: "Placa de video EVGA Nvidia RTX 3060",
     imagen: "/src/assets/img/nvidia3060.jpg",
     precioAnterior: 208000,
@@ -31,7 +31,7 @@ const itemsInStock = [
     categoria: "VideoCards",
   },
   {
-    id: "4",
+    id: 4,
     nombre: "Placa de video EVGA Nvidia RTX 3080",
     imagen: "/src/assets/img/nvidia3060.jpg",
     precioAnterior: 340000,
@@ -40,7 +40,7 @@ const itemsInStock = [
     categoria: "VideoCards",
   },
   {
-    id: "5",
+    id: 5,
     nombre: "Placa de video EVGA Nvidia RTX 3090",
     imagen: "/src/assets/img/nvidia3060.jpg",
     precioAnterior: 525000,
@@ -49,7 +49,7 @@ const itemsInStock = [
     categoria: "VideoCards",
   },
   {
-    id: "6",
+    id: 6,
     nombre: "Fuente de poder EVGA 850W",
     imagen: "/src/assets/img/EVGA.png",
     precioAnterior: 35000,
@@ -58,7 +58,7 @@ const itemsInStock = [
     categoria: "Fuentes de poder",
   },
   {
-    id: "7",
+    id: 7,
     nombre: "Placa de video RTX 2060 6Gb",
     imagen: "/src/assets/img/Carousel/placadevideo2.jpeg",
     precioAnterior: 35000,
@@ -67,7 +67,7 @@ const itemsInStock = [
     categoria: "VideoCards",
   },
   {
-    id: "8",
+    id: 8,
     nombre: "Memoria Ram Kingston Fury DDR4 3200 Mhz",
     imagen: "/src/assets/img/Carousel/ram1.jpeg",
     precioAnterior: 35000,
@@ -76,7 +76,7 @@ const itemsInStock = [
     categoria: "Memorias Ram",
   },
   {
-    id: "9",
+    id: 9,
     nombre: "Placa de video GeForce RTX 3090 24Gb",
     imagen: "/src/assets/img/Carousel/placadevideo3.jpeg",
     precioAnterior: 35000,
@@ -85,7 +85,7 @@ const itemsInStock = [
     categoria: "VideoCards",
   },
   {
-    id: "10",
+    id: 10,
     nombre: "Disco Solido Kingston Fury",
     imagen: "/src/assets/img/Carousel/disco1.jpeg",
     precioAnterior: 35000,
@@ -94,7 +94,7 @@ const itemsInStock = [
     categoria: "Almacenamiento",
   },
   {
-    id: "11",
+    id: 11,
     nombre: "Thermaltake TR2 600W",
     imagen: "/src/assets/img/Carousel/fuente1.jpeg",
     precioAnterior: 35000,
@@ -103,7 +103,7 @@ const itemsInStock = [
     categoria: "Fuentes de poder",
   },
   {
-    id: "12",
+    id: 12,
     nombre: "Monitor Samsung  240Hz 27''",
     imagen: "/src/assets/img/Carousel/monitor 10.jpeg",
     precioAnterior: 35000,
@@ -112,7 +112,7 @@ const itemsInStock = [
     categoria: "Monitores",
   },
   {
-    id: "13",
+    id: 13,
     nombre: "AMD Ryzen 7 5700G",
     imagen: "/src/assets/img/Carousel/cpu3.jpeg",
     precioAnterior: 35000,
@@ -121,7 +121,7 @@ const itemsInStock = [
     categoria: "Procesadores",
   },
   {
-    id: "14",
+    id: 14,
     nombre: "Radeon RX 6900 XT",
     imagen: "/src/assets/img/Carousel/placadevideo3.jpeg",
     precioAnterior: 35000,
@@ -130,7 +130,7 @@ const itemsInStock = [
     categoria: "VideoCards",
   },
   {
-    id: "15",
+    id: 15,
     nombre: "HyperX Cloud Flight",
     imagen: "/src/assets/img/Carousel/Auris1.jpeg",
     precioAnterior: 35000,
@@ -139,7 +139,7 @@ const itemsInStock = [
     categoria: "Auriculares",
   },
   {
-    id: "16",
+    id: 16,
     nombre: "Redragon K552W Kumara",
     imagen: "/src/assets/img/Carousel/Teclado1.jpeg",
     precioAnterior: 35000,
@@ -148,7 +148,7 @@ const itemsInStock = [
     categoria: "Teclados",
   },
   {
-    id: "17",
+    id: 17,
     nombre: "Mouse Gamer Galax Slider",
     imagen: "/src/assets/img/Carousel/mouse1.jpeg",
     precioAnterior: 35000,
@@ -157,8 +157,8 @@ const itemsInStock = [
     categoria: "Mouses",
   },
   {
-    id: "18",
-    nombre: "Ryzen 5 5600g",
+    id: 18,
+    nombre: "Procesador Ryzen 5 5600g",
     imagen: "/src/assets/img/r55600g.jpg",
     precioAnterior: 35000,
     precio: 26000,
@@ -167,8 +167,8 @@ const itemsInStock = [
     categoria: "Procesadores",
   },
   {
-    id: "19",
-    nombre: "Redragon M988 Rgb Storm Elite",
+    id: 19,
+    nombre: "Mouse Redragon M988 Rgb Storm Elite",
     imagen: "/src/assets/img/Carousel/mouse2.jpeg",
     precioAnterior: 35000,
     precio: 26000,
@@ -176,3 +176,11 @@ const itemsInStock = [
     categoria: "Mouses",
   },
 ];
+export const ProductsProvider = ({ children }) => {
+  const [products, setProducts] = useState(ProductsInStock);
+  return (
+    <ProductsContext.Provider value={{ products, setProducts }}>
+      {children}
+    </ProductsContext.Provider>
+  );
+};

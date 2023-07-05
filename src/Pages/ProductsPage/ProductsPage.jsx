@@ -1,14 +1,16 @@
 import React from "react";
 import CardList from "../../Components/CardList/CardList";
-import "./ProductsPage.css"
-const ProductsPage = ({counter,setCounter,counterUp}) => {
+
+import { ProductsProvider } from "../../Context/ProductsContext";
+import "./ProductsPage.css";
+const ProductsPage = () => {
   return (
-    <div>
-     
-      <h2>Productos más buscados</h2>
-      <CardList counter={counter} setCounter={setCounter} counterUp={counterUp} />
-    
-    </div>
+    <ProductsProvider>
+      <div>
+        <h2>Productos más buscados</h2>
+        <CardList />
+      </div>
+    </ProductsProvider>
   );
 };
 
