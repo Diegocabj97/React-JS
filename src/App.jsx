@@ -27,7 +27,11 @@ import ErrorPage from "./Pages/ErrorPage";
 import Category from "./Pages/Category/Category";
 import SearchPage from "./Pages/SearchPage/SearchPage";
 
+// ////////////////////////FIREBASE///////////////////////////
+
 const App = () => {
+ 
+
   const [navButtonState, setNavButtonState] = useState(false);
   const [products, setProducts] = useState([]);
   const handleSearch = (searchText) => {
@@ -68,12 +72,13 @@ const App = () => {
               <NavBarImport
                 counter={counter}
                 setCounter={setCounter}
-                greeting="Flores Gamers" onSearch={handleSearch}
+                greeting="Flores Gamers"
+                onSearch={handleSearch}
                 toggleContainerClass={cambiarClaseContainer}
                 setButtonState={setNavButtonState}
                 setNavButtonState={navButtonState}
-                className={navButtonState ? "bg-light" : "bg-light"}>
-              </NavBarImport>
+                className={navButtonState ? "bg-light" : "bg-light"}
+              ></NavBarImport>
 
               <ContainerCarrito className={containerClass} />
             </CartProvider>

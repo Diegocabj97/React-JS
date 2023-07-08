@@ -63,7 +63,9 @@ const NavBarImport = ({
               <LinkContainer to="/Category/Auriculares">
                 <Nav.Link className="NavItem">Auriculares</Nav.Link>
               </LinkContainer>
-
+              <LinkContainer to="/Category/Motherboards">
+                <Nav.Link className="NavItem">Motherboards</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/Category/Almacenamiento">
                 <Nav.Link className="NavItem">Almacenamiento</Nav.Link>
               </LinkContainer>
