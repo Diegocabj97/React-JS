@@ -8,17 +8,27 @@
 .navbar-collapse .collapse.brandText {
   color: white;
 }
-.NavItem{
+.NavItem {
   display: flex;
   justify-content: space-around;
-  
 }
-.dropdown-menu{
+.dropdown-menu {
   background-color: rgba(82, 78, 78, 0.767);
 }
-.SearchBtn{
+.SearchBtn {
   margin: 5px;
 }
-.container-icon{
-  
+.BtnLight {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 10px;
+  width: 20%;
+  text-align: center;
+}
+.BtnDark {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 20%;
+  text-align: center;
 }
