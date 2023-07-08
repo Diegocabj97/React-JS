@@ -1,11 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import "./CartWidget.css";
+import { useState } from "react";
 
-const CartWidget = ({counter}) => {
+const CartWidget = ({ counter, onClick, buttonState, setButtonState, navButtonState }) => {
   return (
-    <Container className="container-icon">
-      <div className="container-cart-icon">
+    <Container
+      className={setButtonState  ? "container-icon light" : "container-icon dark"}
+    >
+      <div className="container-cart-icon" onClick={onClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
