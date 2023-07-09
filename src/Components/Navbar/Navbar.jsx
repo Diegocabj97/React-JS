@@ -8,8 +8,6 @@ import "./Navbar.css";
 import ContainerCarrito from "../ContainerCarrito/ContainerCarrito";
 import { LinkContainer } from "react-router-bootstrap";
 import SearchForm from "./SearchForm.jsx";
-import navButtonState from "../../App";
-import setNavButtonState from "../../App";
 import { CartContext } from "../../Context/CartContext";
 import CartWidget from "../cart/CartWidget.jsx";
 

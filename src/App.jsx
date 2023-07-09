@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
 
 // IMPORTS
 import "./App.css";
 import Header from "./Components/Header/header";
 import ContainerIndex from "./Components/ContainerIndex/ContainerIndex";
-import Cards from "./Components/card/card.jsx";
 import { ProductsProvider } from "./Context/ProductsContext.jsx";
-import CardList from "./Components/CardList/CardList.jsx";
 import NavBarImport from "./Components/Navbar/Navbar.jsx";
 import ContainerCarrito from "./Components/ContainerCarrito/ContainerCarrito";
 import { CartProvider } from "./Context/CartContext.jsx";
@@ -30,9 +23,7 @@ import SearchPage from "./Pages/SearchPage/SearchPage";
 // ////////////////////////FIREBASE///////////////////////////
 
 const App = () => {
- 
-
-  const [navButtonState, setNavButtonState] = useState(false);
+  const [ButtonState, setButtonState] = useState(false);
   const [products, setProducts] = useState([]);
   const handleSearch = (searchText) => {
     if (searchText) {
@@ -52,10 +43,7 @@ const App = () => {
       setProducts([]);
     }
   };
-  const [containerClass, setContainerClass] = useState("");
-  const cambiarClaseContainer = () => {
-    setContainerClass("");
-  };
+
   const [counter, setCounter] = useState(0);
   const counterUp = () => {
     setCounter(counter + 1);
@@ -67,26 +55,21 @@ const App = () => {
     <div>
       <ProductsProvider>
         <Router>
-          <div className={navButtonState ? "App-dark" : "App-light"}>
+          <div className={ButtonState ? "App-dark" : "App-light"}>
             <CartProvider>
               <NavBarImport
                 counter={counter}
                 setCounter={setCounter}
                 greeting="Flores Gamers"
                 onSearch={handleSearch}
-                toggleContainerClass={cambiarClaseContainer}
-                setButtonState={setNavButtonState}
-                setNavButtonState={navButtonState}
-                className={navButtonState ? "bg-light" : "bg-light"}
+                setButtonState={setButtonState}
               ></NavBarImport>
 
-              <ContainerCarrito className={containerClass} />
+              <ContainerCarrito />
             </CartProvider>
             <Header greeting="Flores Gamers!" />
 
-            <ContainerIndex
-              className={navButtonState ? "Nav-dark" : "Nav-light"}
-            />
+            <ContainerIndex setButtonState={ButtonState}></ContainerIndex>
 
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -97,7 +80,7 @@ const App = () => {
               <Route path="/Contact" element={<Contact />} />
               <Route
                 path="/Detail/:id"
-                element={<DetailPage counterUp={counterUp} />}
+                element={<DetailPage counterUp={counterUp} setButtonState={ButtonState} />}
               />
               <Route path="/Category/:categoryid" element={<Category />} />
               <Route path="*" element={<ErrorPage />} />

@@ -3,49 +3,57 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./DetailPage.css";
 import { useParams } from "react-router-dom";
-import Specs from "./Specs";
-const DetailPage = () => {
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+const DetailPage = ({ setButtonState }) => {
   const [product, setProduct] = useState({});
-  let { id } = useParams();
+  const { id } = useParams();
+
   useEffect(() => {
-    fetch(`/Productos.json`)
-      .then((response) => response.json())
-      .then((product) =>
-        setProduct(product.find((product) => product.id === id))
-      );
+    const getProduct = async () => {
+      try {
+        const productFound = doc(db, "products", id);
+        const docSnap = await getDoc(productFound);
+        if (docSnap.exists()) {
+          setProduct({ id: docSnap.id, ...docSnap.data() });
+        } else {
+          console.log("El producto no existe.");
+        }
+      } catch (error) {
+        console.error("Error al obtener el producto:", error);
+      }
+    };
+
+    getProduct();
   }, [id]);
 
   return (
-    <div
-      className="ProductSpecs"
-      style={{
-        display: "flex",
-        margin: "auto",
-        width: "80%",
-        justifyContent: "space-between",
-      }}
-    >
-      <Card className="CardDetail">
-        <Card.Img variant="top" src={product.imagen} />
-        <Card.Body>
-          <Card.Title>{product.nombre}</Card.Title>
-
-          <Card.Text></Card.Text>
-          <Button variant="primary">Comprar</Button>
-        </Card.Body>
-      </Card>
+    
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
+        className={
+          setButtonState ? "ProductDetail-light" : "ProductDetail-dark"
+        }
       >
-        <h1>Especificaciones del producto</h1>
+        {product && (
+          <Card className="CardDetail">
+            <Card.Img variant="top" src={product.imagen} />
+            <Card.Body>
+              <Card.Title>{product.nombre}</Card.Title>
+              <Card.Text></Card.Text>
+              <Button variant="primary">Comprar</Button>
+            </Card.Body>
+          </Card>
+        )}
 
-        <p>{Specs}</p>
+        <div className="ProductSpecs">
+          <h1>Especificaciones del producto</h1>
+          <hr></hr>
+          <br></br>
+          {product.Specs}
+        </div>
       </div>
-    </div>
+    
   );
 };
 
