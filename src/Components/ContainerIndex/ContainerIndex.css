@@ -58,6 +58,19 @@
     font-size: 14px;
   }
 }
+@media (max-width: 1022px) {
+  .containerIndex-light p {
+    display: none;
+  }
+  .ProductSpecs h1 {
+    font-size: 20px;
+  }
+
+  .ProductSpecs {
+    font-size: smaller;
+  }
+}
+
 @media (max-width: 968) {
   .containerIndex-light {
     display: flex;
@@ -70,8 +83,28 @@
     margin: auto;
     width: 70px;
   }
+  .CardDetail {
+    width: fit-content;
+    height: fit-content;
+  }
+  .ProductSpecs{
+    height: fit-content;
+    font-size:x-small;
+  }
 }
-
+@media (max-width: 665px) {
+  .containerIndex-light strong {
+    display: none;
+  }
+  .containerIndex-light div:nth-child(1) {
+    display: none;
+  }
+}
+@media (max-width: 665px) {
+  .containerIndex-light span i {
+    font-size: 30px;
+  }
+}
 /*//////////////////DARK/////////////////*/
 
 .containerIndex-dark {

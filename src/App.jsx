@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 // IMPORTS
 import "./App.css";
 import Header from "./Components/Header/header";
 import ContainerIndex from "./Components/ContainerIndex/ContainerIndex";
 import { ProductsProvider } from "./Context/ProductsContext.jsx";
 import NavBarImport from "./Components/Navbar/Navbar.jsx";
-import ContainerCarrito from "./Components/ContainerCarrito/ContainerCarrito";
+import ContainerCarrito from "./Components/cart/ContainerCarrito/ContainerCarrito";
 import { CartProvider } from "./Context/CartContext.jsx";
 
 // IMPORT PAGES
@@ -24,7 +25,7 @@ import SearchPage from "./Pages/SearchPage/SearchPage";
 
 const App = () => {
   const [ButtonState, setButtonState] = useState(false);
-  const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const handleSearch = (searchText) => {
     if (searchText) {
       fetch("./Productos.json")
@@ -53,10 +54,10 @@ const App = () => {
   };
   return (
     <div>
-      <ProductsProvider>
-        <Router>
-          <div className={ButtonState ? "App-dark" : "App-light"}>
-            <CartProvider>
+      <CartProvider>
+        <ProductsProvider>
+          <Router>
+            <div className={ButtonState ? "App-dark" : "App-light"}>
               <NavBarImport
                 counter={counter}
                 setCounter={setCounter}
@@ -65,33 +66,42 @@ const App = () => {
                 setButtonState={setButtonState}
               ></NavBarImport>
 
-              <ContainerCarrito />
-            </CartProvider>
-            <Header greeting="Flores Gamers!" />
-
-            <ContainerIndex setButtonState={ButtonState}></ContainerIndex>
-
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route
-                path="/ProductsPage"
-                element={<ProductsPage counterUp={counterUp} />}
+              <ContainerCarrito
               />
-              <Route path="/Contact" element={<Contact />} />
-              <Route
-                path="/Detail/:id"
-                element={<DetailPage counterUp={counterUp} setButtonState={ButtonState} />}
+
+              <Header
+                greeting="Flores Gamers!"
               />
-              <Route path="/Category/:categoryid" element={<Category />} />
-              <Route path="*" element={<ErrorPage />} />
-              <Route
-                path="/Search/:onSearch"
-                element={<SearchPage onSearch={handleSearch} />}
-              ></Route>
-            </Routes>
-          </div>
-        </Router>
-      </ProductsProvider>
+
+              <ContainerIndex setButtonState={ButtonState}></ContainerIndex>
+
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                  path="/ProductsPage"
+                  element={<ProductsPage counterUp={counterUp} />}
+                />
+                <Route path="/Contact" element={<Contact />} />
+                <Route
+                  path="/Detail/:id"
+                  element={
+                    <DetailPage
+                      counterUp={counterUp}
+                      setButtonState={ButtonState}
+                    />
+                  }
+                />
+                <Route path="/Category/:categoryid" element={<Category />} />
+                <Route path="*" element={<ErrorPage />} />
+                <Route
+                  path="/Search/:onSearch"
+                  element={<SearchPage onSearch={handleSearch} />}
+                ></Route>
+              </Routes>
+            </div>
+          </Router>
+        </ProductsProvider>
+      </CartProvider>
     </div>
   );
 };

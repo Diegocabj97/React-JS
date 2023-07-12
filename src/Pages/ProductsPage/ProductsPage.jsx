@@ -1,6 +1,7 @@
 import React from "react";
 import CardList from "../../Components/CardList/CardList";
-
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
 import { ProductsProvider } from "../../Context/ProductsContext";
 import "./ProductsPage.css";
 const ProductsPage = () => {

@@ -5,8 +5,9 @@ import "./DetailPage.css";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Cards from "../../Components/card/card";
 const DetailPage = ({ setButtonState }) => {
+  
   const [product, setProduct] = useState({});
   const { id } = useParams();
 
@@ -29,31 +30,18 @@ const DetailPage = ({ setButtonState }) => {
   }, [id]);
 
   return (
-    
-      <div
-        className={
-          setButtonState ? "ProductDetail-light" : "ProductDetail-dark"
-        }
-      >
-        {product && (
-          <Card className="CardDetail">
-            <Card.Img variant="top" src={product.imagen} />
-            <Card.Body>
-              <Card.Title>{product.nombre}</Card.Title>
-              <Card.Text></Card.Text>
-              <Button variant="primary">Comprar</Button>
-            </Card.Body>
-          </Card>
-        )}
+    <div
+      className={setButtonState ? "ProductDetail-light" : "ProductDetail-dark"}
+    >
+      {product && <Cards product={product} className="CardDetail" />}
 
-        <div className="ProductSpecs">
-          <h1>Especificaciones del producto</h1>
-          <hr></hr>
-          <br></br>
-          {product.Specs}
-        </div>
+      <div className="ProductSpecs">
+        <h1>Especificaciones del producto</h1>
+        <hr></hr>
+        <br></br>
+        {product.Specs}
       </div>
-    
+    </div>
   );
 };
 

@@ -4,12 +4,10 @@ import "./CartWidget.css";
 import { useState } from "react";
 
 const CartWidget = ({
-  counter,
   onClick,
-  buttonState,
   setButtonState,
-  navButtonState,
 }) => {
+ 
   return (
     <Container className="container-icon">
       <div className="container-cart-icon" onClick={onClick}>
@@ -30,7 +28,7 @@ const CartWidget = ({
         </svg>
 
         <div className="count-products">
-          <span id="contador-productos">{counter}</span>
+          <span id="contador-productos"></span>
         </div>
       </div>
     </Container>

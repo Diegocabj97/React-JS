@@ -5,11 +5,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Navbar.css";
-import ContainerCarrito from "../ContainerCarrito/ContainerCarrito";
+import ContainerCarrito from "../cart/ContainerCarrito/ContainerCarrito";
 import { LinkContainer } from "react-router-bootstrap";
 import SearchForm from "./SearchForm.jsx";
 import { CartContext } from "../../Context/CartContext";
-import CartWidget from "../cart/CartWidget.jsx";
+import CartWidget from "../cart/CartWidget/CartWidget";
 
 const NavBarImport = ({
   greeting,
@@ -19,6 +19,8 @@ const NavBarImport = ({
   value,
   setButtonState,
 }) => {
+  const { cart, setCart } = useContext(CartContext);
+
   const [buttonState, setLocalButtonState] = useState(false);
 
   const handleButtonClick = () => {
@@ -116,6 +118,8 @@ const NavBarImport = ({
               onClick={toggleContainerClass}
               counter={counter}
               setCounter={setCounter}
+              cart={cart}
+              setCart={setCart}
             />
           </Nav>
         </Navbar.Collapse>
