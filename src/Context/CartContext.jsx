@@ -10,9 +10,9 @@ const CartProvider = ({ children }) => {
 
   const toggleContainerClass = () => {
     setContainerClass((containerClass) =>
-      containerClass === "container-cart-products-hidden-cart"
-        ? "container-cart-products-show-cart"
-        : "container-cart-products-hidden-cart"
+      containerClass === "container-cart-products-show-cart"
+        ? "container-cart-products-hidden-cart"
+        : "container-cart-products-show-cart"
     );
   };
 
