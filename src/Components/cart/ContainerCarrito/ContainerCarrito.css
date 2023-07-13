@@ -39,3 +39,9 @@
 .container-cart-products-hidden-cart {
   display: none;
 }
+.endBuyBtn{
+  color: rgb(255, 255, 255);
+  background-color: rgb(17, 95, 238);
+  border-radius: 5px;
+  margin: 10px;
+}

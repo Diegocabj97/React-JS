@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 // IMPORTS
 import "./App.css";
 import Header from "./Components/Header/header";
@@ -20,6 +19,7 @@ import DetailPage from "./Pages/DetailPage/DetailPage";
 import ErrorPage from "./Pages/ErrorPage";
 import Category from "./Pages/Category/Category";
 import SearchPage from "./Pages/SearchPage/SearchPage";
+import PayCartPage from "./Pages/PayCartPage/PayCartPage";
 
 // ////////////////////////FIREBASE///////////////////////////
 
@@ -66,12 +66,9 @@ const App = () => {
                 setButtonState={setButtonState}
               ></NavBarImport>
 
-              <ContainerCarrito
-              />
+              <ContainerCarrito />
 
-              <Header
-                greeting="Flores Gamers!"
-              />
+              <Header greeting="Flores Gamers!" />
 
               <ContainerIndex setButtonState={ButtonState}></ContainerIndex>
 
@@ -81,6 +78,7 @@ const App = () => {
                   path="/ProductsPage"
                   element={<ProductsPage counterUp={counterUp} />}
                 />
+                <Route path="/PayCart" element={<PayCartPage />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route
                   path="/Detail/:id"

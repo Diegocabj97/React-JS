@@ -1,0 +1,59 @@
+.containerIndex-light {
+  display: none;
+}
+.containerIndex-dark {
+  display: none;
+  z-index: 1;
+}
+.rmvBtn {
+  margin: 20px;
+  max-width: 200px;
+  height: 40px;
+}
+.payCart {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.253);
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(134, 134, 134, 0.973);
+}
+.BuyItem {
+  display: flex;
+  margin: auto;
+  width: 33%;
+  height: 33%;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.397);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.BuyItem img {
+  max-width: 100px;
+  margin: 5px;
+}
+.BuyItem h3 {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+}
+.BuyItem p {
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+  }
+.PayBtn {
+  display: flex;
+  margin: auto;
+  background-color: red;
+  color: white;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}

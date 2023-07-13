@@ -8,10 +8,38 @@ import { CartContext } from "../../Context/CartContext";
 function Cards({ product }) {
   const { cart, setCart } = useContext(CartContext);
   const onAddProduct = (product) => {
-    console.log(product);
-    setCart([...cart, product]);
-    
+    const updatedCart = [...cart];
+    const existingProductIndex = updatedCart.findIndex(
+      (p) => p.id === product.id
+    );
+
+    if (existingProductIndex !== -1) {
+      updatedCart[existingProductIndex].cantidad += 1;
+    } else {
+      updatedCart.push({ ...product, cantidad: 1 });
+    }
+
+    setCart(updatedCart);
   };
+
+  const increaseQuantity = (productId) => {
+    const updatedCart = cart.map((product) =>
+      product.id === productId
+        ? { ...product, cantidad: product.cantidad + 1 }
+        : product
+    );
+    setCart(updatedCart);
+  };
+
+  const decreaseQuantity = (productId) => {
+    const updatedCart = cart.map((product) =>
+      product.id === productId && product.cantidad > 1
+        ? { ...product, cantidad: product.cantidad - 1 }
+        : product
+    );
+    setCart(updatedCart);
+  };
+
   return (
     <div>
       <Card>
@@ -26,6 +54,7 @@ function Cards({ product }) {
           >
             Comprar
           </Button>
+         
         </Card.Body>
       </Card>
     </div>

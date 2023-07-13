@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./ContainerCarrito.css";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../Context/CartContext";
@@ -14,6 +15,11 @@ const ContainerCarrito = () => {
           <CartElements />
 
           <h4>Total: ${total}</h4>
+          <Link to="/PayCart">
+            <button  className="endBuyBtn" variant="primary">
+              Finaliza tu compra!
+            </button>
+          </Link>
         </div>
       </div>
     </Container>

@@ -3,11 +3,10 @@ import { CartContext } from "../../../Context/CartContext";
 import "./cartElements.css";
 
 const cartElements = () => {
-  const { cart, setcart } = useContext(CartContext);
-  const itemRemove = () => {
-    return cart.map((product) => {
-      return console.log("removido");
-    });
+  const { cart, setCart } = useContext(CartContext);
+  const removeItem = (productId) => {
+    const updatedCart = cart.filter((product) => product.id !== productId);
+    setCart(updatedCart);
   };
   return cart.map((product) => {
     return (
@@ -15,7 +14,7 @@ const cartElements = () => {
         <img className="cartItemImg" src={product.imagen} alt="product-card" />
         <h3 className="cartItemName">{product.nombre}</h3>
         <h4 className="cartItemPrice">{product.precio}$</h4>
-        <button onClick={itemRemove} className="rmvBtn">
+        <button onClick={() => removeItem(product.id)} className="rmvBtn">
           removebtn
         </button>
       </div>
