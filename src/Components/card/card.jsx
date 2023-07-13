@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./card.css";
-import { ProductsContext } from "../../Context/ProductsContext";
 import { CartContext } from "../../Context/CartContext";
 
 function Cards({ product }) {
@@ -22,24 +21,6 @@ function Cards({ product }) {
     setCart(updatedCart);
   };
 
-  const increaseQuantity = (productId) => {
-    const updatedCart = cart.map((product) =>
-      product.id === productId
-        ? { ...product, cantidad: product.cantidad + 1 }
-        : product
-    );
-    setCart(updatedCart);
-  };
-
-  const decreaseQuantity = (productId) => {
-    const updatedCart = cart.map((product) =>
-      product.id === productId && product.cantidad > 1
-        ? { ...product, cantidad: product.cantidad - 1 }
-        : product
-    );
-    setCart(updatedCart);
-  };
-
   return (
     <div>
       <Card>
@@ -47,14 +28,15 @@ function Cards({ product }) {
         <Card.Body>
           <Card.Title>{product.nombre}</Card.Title>
           <Card.Text>{product.descripcion}</Card.Text>
-          <Button
-            onClick={() => onAddProduct(product)}
-            className="ComprarBtn"
-            variant="primary"
-          >
-            Comprar
-          </Button>
-         
+        
+            <Button
+              onClick={() => onAddProduct(product)}
+              className="ComprarBtn"
+              variant="primary"
+            >
+              Comprar
+            </Button>
+          
         </Card.Body>
       </Card>
     </div>

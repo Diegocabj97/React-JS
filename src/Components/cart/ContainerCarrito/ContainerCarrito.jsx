@@ -34,7 +34,7 @@ const ContainerCarrito = () => {
           textAlign: "center",
           borderRadius: 5,
           border: 1,
-          margin: "auto",
+          margin: "10px",
           border: "solid",
           width: "100%",
         }}

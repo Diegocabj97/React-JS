@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import "./cartElements.css";
 
-const cartElements = () => {
+const cartElements = ({counterdown}) => {
   const { cart, setCart } = useContext(CartContext);
   const removeItem = (productId) => {
     const updatedCart = cart.filter((product) => product.id !== productId);
@@ -15,7 +15,7 @@ const cartElements = () => {
         <h3 className="cartItemName">{product.nombre}</h3>
         <h4 className="cartItemPrice">{product.precio}$</h4>
         <button onClick={() => removeItem(product.id)} className="rmvBtn">
-          removebtn
+        {counterdown}
         </button>
       </div>
     );
