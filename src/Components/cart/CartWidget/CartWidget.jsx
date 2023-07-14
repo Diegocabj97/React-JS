@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import "./CartWidget.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../../Context/CartContext";
 
-const CartWidget = ({
-  onClick,
-  setButtonState,
-}) => {
- 
+const CartWidget = ({ onClick, setButtonState }) => {
+  const { cart } = useContext(CartContext);
+  const counter = cart.reduce(
+    (total, product) => total + product.cantidad,
+    0
+  );
   return (
     <Container className="container-icon">
       <div className="container-cart-icon" onClick={onClick}>
@@ -28,7 +30,7 @@ const CartWidget = ({
         </svg>
 
         <div className="count-products">
-          <span id="contador-productos"></span>
+          <span id="contador-productos">{counter}</span>
         </div>
       </div>
     </Container>

@@ -87,9 +87,9 @@
     width: fit-content;
     height: fit-content;
   }
-  .ProductSpecs{
+  .ProductSpecs {
     height: fit-content;
-    font-size:x-small;
+    font-size: x-small;
   }
 }
 @media (max-width: 665px) {

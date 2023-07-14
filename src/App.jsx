@@ -9,6 +9,8 @@ import { ProductsProvider } from "./Context/ProductsContext.jsx";
 import NavBarImport from "./Components/Navbar/Navbar.jsx";
 import ContainerCarrito from "./Components/cart/ContainerCarrito/ContainerCarrito";
 import { CartProvider } from "./Context/CartContext.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // IMPORT PAGES
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -20,6 +22,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import Category from "./Pages/Category/Category";
 import SearchPage from "./Pages/SearchPage/SearchPage";
 import PayCartPage from "./Pages/PayCartPage/PayCartPage";
+import ThankYouPage from "./Pages/ThankYouPage/ThankYouPage.jsx";
 
 // ////////////////////////FIREBASE///////////////////////////
 
@@ -71,13 +74,15 @@ const App = () => {
               <Header greeting="Flores Gamers!" />
 
               <ContainerIndex setButtonState={ButtonState}></ContainerIndex>
-
+              <ToastContainer />
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route
                   path="/ProductsPage"
                   element={<ProductsPage counterUp={counterUp} />}
                 />
+
+                <Route path="/ThankYouPage" element={<ThankYouPage />} />
                 <Route path="/PayCart" element={<PayCartPage />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route

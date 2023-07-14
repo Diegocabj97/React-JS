@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./card.css";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
+import { toast, ToastContainer } from "react-toastify";
 
-function Cards({ product }) {
+function Cards({ product, added }) {
   const { cart, setCart } = useContext(CartContext);
   const onAddProduct = (product) => {
     const updatedCart = [...cart];
@@ -16,11 +18,22 @@ function Cards({ product }) {
       updatedCart[existingProductIndex].cantidad += 1;
     } else {
       updatedCart.push({ ...product, cantidad: 1 });
+      setCart(updatedCart);
     }
-
-    setCart(updatedCart);
+    toast.success("Producto agregado al carrito", {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   };
-
+  const BuyButtonClick = (event) => {
+    event.preventDefault();
+    onAddProduct(product);
+  };
   return (
     <div>
       <Card>
@@ -28,15 +41,15 @@ function Cards({ product }) {
         <Card.Body>
           <Card.Title>{product.nombre}</Card.Title>
           <Card.Text>{product.descripcion}</Card.Text>
-        
-            <Button
-              onClick={() => onAddProduct(product)}
-              className="ComprarBtn"
-              variant="primary"
-            >
-              Comprar
-            </Button>
-          
+
+          <Button
+            onClick={BuyButtonClick}
+            added={added}
+            className="ComprarBtn"
+            variant="primary"
+          >
+            Comprar
+          </Button>
         </Card.Body>
       </Card>
     </div>

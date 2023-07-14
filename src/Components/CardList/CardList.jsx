@@ -8,7 +8,7 @@ import {
   ProductsProvider,
 } from "../../Context/ProductsContext.jsx";
 
-const CardList = ({ counter, setCounter, counterUp }) => {
+const CardList = () => {
   const { products, setProducts } = useContext(ProductsContext);
   return (
     <ProductsProvider>
@@ -18,10 +18,8 @@ const CardList = ({ counter, setCounter, counterUp }) => {
             <div key={product.id}>
               <Link to={`/detail/${product.id}`}>
                 <Cards
-                  counter={counter}
-                  setCounter={setCounter}
-                  counterUp={counterUp}
                   product={product}
+                  
                 />
               </Link>
             </div>
