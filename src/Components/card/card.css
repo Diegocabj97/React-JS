@@ -16,19 +16,17 @@
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   transform: translateY(-1%);
 }
-Card.Title{
-  display: flex;
-  background-color: red;
-}
-.card Card.body {
-  align-items: center;
-  max-width: 100%;
-  max-height: 100%;
-}
+
 .cardImg {
   margin: auto;
   min-height: 150px;
   max-height: 200px;
   max-width: 200px;
   min-width: 150px;
+}
+.cardPrice{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(128, 128, 128, 0.377);
+  font-weight: bold;
 }

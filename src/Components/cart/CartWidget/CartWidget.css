@@ -28,9 +28,9 @@
   position: absolute;
   top: 50%;
   right: 10px;
-
-  background-color: #646464;
-  color: #fff;
+font-weight: bold;
+  background-color: #f76d6d;
+  color: #020202;
   width: 25px;
   height: 25px;
   cursor: pointer;

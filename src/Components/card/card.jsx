@@ -29,11 +29,13 @@ function Cards({ product, added }) {
       draggable: true,
       progress: undefined,
     });
+    setCart(updatedCart);
   };
   const BuyButtonClick = (event) => {
     event.preventDefault();
     onAddProduct(product);
   };
+
   return (
     <div>
       <Card>
@@ -41,7 +43,7 @@ function Cards({ product, added }) {
         <Card.Body>
           <Card.Title>{product.nombre}</Card.Title>
           <Card.Text>{product.descripcion}</Card.Text>
-
+          <Card.Text className="cardPrice">{product.precio}</Card.Text>
           <Button
             onClick={BuyButtonClick}
             added={added}

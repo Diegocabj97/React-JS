@@ -1,10 +1,11 @@
-import React from "react";
-import DetailPage from "./DetailPage"
+import React, { useContext } from "react";
+import DetailPage from "./DetailPage";
+import { ProductsContext } from "../../Context/ProductsContext";
 const Specs = () => {
+  const { products } = useContext(ProductsContext);
   return (
     <div>
-     <DetailPage>{product.descripcion}</DetailPage>
-      
+      <DetailPage>{products.Specs}</DetailPage>
     </div>
   );
 };

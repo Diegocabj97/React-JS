@@ -81,7 +81,6 @@ const App = () => {
                   path="/ProductsPage"
                   element={<ProductsPage counterUp={counterUp} />}
                 />
-
                 <Route path="/ThankYouPage" element={<ThankYouPage />} />
                 <Route path="/PayCart" element={<PayCartPage />} />
                 <Route path="/Contact" element={<Contact />} />

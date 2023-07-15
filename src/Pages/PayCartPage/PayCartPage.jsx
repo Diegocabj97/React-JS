@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const PayCartPage = () => {
   const { cart } = useContext(CartContext);
-  const total = cart.reduce((acc, el) => acc + el.precio, 0);
+  const total = cart.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
   return total > 0 ? (
     <div className="payCart">
@@ -15,12 +15,13 @@ const PayCartPage = () => {
         <div className="BuyItem" key={product.id}>
           <h3>{product.nombre}</h3>
           <img src={product.imagen} alt="" />
-          <p>Precio: {product.precio}</p>
+          <p>Precio: ${product.precio}</p>
+          <p>Cantidad: {product.cantidad}</p>
         </div>
       ))}
       <h3>El total de tu compra es de $:{total}</h3>
       <Link to={"/ThankYouPage"}>
-      <HandlePayment />
+        <HandlePayment />
       </Link>
     </div>
   ) : (

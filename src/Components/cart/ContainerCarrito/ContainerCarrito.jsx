@@ -4,9 +4,11 @@ import "./ContainerCarrito.css";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import CartElements from "../CartElements/cartElements";
+
 const ContainerCarrito = () => {
   const { cart, containerClass } = useContext(CartContext);
-  const total = cart.reduce((acc, el) => acc + el.precio, 0);
+  const total = cart.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+
   return cart.length > 0 ? (
     <Container className={containerClass}>
       <div>
@@ -16,7 +18,7 @@ const ContainerCarrito = () => {
 
           <h4>Total: ${total}</h4>
           <Link to="/PayCart">
-            <button  className="endBuyBtn" variant="primary">
+            <button className="endBuyBtn" variant="primary">
               Finaliza tu compra!
             </button>
           </Link>

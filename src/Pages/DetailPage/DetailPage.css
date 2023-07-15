@@ -39,4 +39,12 @@
   margin: 20px;
   border: 1px solid rgba(0, 0, 0, 0.466);
   border-radius: 5px;
+  
+}
+.ProductDetail {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
 }
