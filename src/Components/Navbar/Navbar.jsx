@@ -41,9 +41,6 @@ const NavBarImport = ({
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="/ProductsPage">
-              <Nav.Link className="NavItem">Todos los Productos</Nav.Link>
-            </LinkContainer>
             <NavDropdown
               className="dropdown"
               title="Categorías"
@@ -88,7 +85,7 @@ const NavBarImport = ({
               align="end"
               id="collasible-nav-dropdown"
             >
-              <LinkContainer to="/Contacto">
+              <LinkContainer to="/Contact">
                 <Nav.Link className="NavItem">Contactanos</Nav.Link>
               </LinkContainer>
               <Nav.Link className="NavItem">Soporte Técnico</Nav.Link>

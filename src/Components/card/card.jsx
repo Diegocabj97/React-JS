@@ -43,14 +43,14 @@ function Cards({ product, added }) {
         <Card.Body>
           <Card.Title>{product.nombre}</Card.Title>
           <Card.Text>{product.descripcion}</Card.Text>
-          <Card.Text className="cardPrice">{product.precio}</Card.Text>
+          <Card.Text className="cardPrice">$ {product.precio}</Card.Text>
           <Button
             onClick={BuyButtonClick}
             added={added}
             className="ComprarBtn"
             variant="primary"
           >
-            Comprar
+            Agregar al carrito
           </Button>
         </Card.Body>
       </Card>

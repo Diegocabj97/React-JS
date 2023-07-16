@@ -11,9 +11,13 @@
 .NavItem {
   display: flex;
   justify-content: space-around;
+  text-align: center;
+}
+.NavItem:hover {
+  background-color: rgb(211, 211, 211);
 }
 .dropdown-menu {
-  background-color: rgba(82, 78, 78, 0.767);
+  background-color: rgb(255, 255, 255);
 }
 .SearchBtn {
   margin: 5px;

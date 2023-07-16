@@ -47,20 +47,22 @@ const CartElements = () => {
             <h3 className="cartItemName">{nombre}</h3>
             <h4 className="cartItemPrice">{precio}$</h4>
             <p className="cartItemQuantity">Cantidad:{product.cantidad}</p>
-            <div className="BtnCantidad">
+            <div className="BtnAgregar">
               <Button
                 onClick={() => handleQuantityChange(product.id, -1)}
                 variant="outline-danger"
               >
                 -
-              </Button>{" "}
+              </Button>
             </div>
-            <Button
-              onClick={() => handleQuantityChange(product.id, 1)}
-              variant="outline-success"
-            >
-              +
-            </Button>{" "}
+            <div className="BtnRestar">
+              <Button
+                onClick={() => handleQuantityChange(product.id, 1)}
+                variant="outline-success"
+              >
+                +
+              </Button>
+            </div>
             <div>
               <CloseButton
                 onClick={() => removeItem(product.id)}

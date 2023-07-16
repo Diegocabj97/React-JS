@@ -1,13 +1,14 @@
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./ContainerCarrito.css";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import CartElements from "../CartElements/cartElements";
 
 const ContainerCarrito = () => {
   const { cart, containerClass } = useContext(CartContext);
   const total = cart.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
+ 
 
   return cart.length > 0 ? (
     <Container className={containerClass}>
@@ -41,7 +42,7 @@ const ContainerCarrito = () => {
           width: "100%",
         }}
       >
-        El carrito esta vacio
+        El carrito esta vacio :(
       </p>
     </Container>
   );

@@ -14,7 +14,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 // IMPORT PAGES
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage/HomePage.jsx";
 import ProductsPage from "./Pages/ProductsPage/ProductsPage.jsx";
 import Contact from "./Pages/Contact/Contact.jsx";
 import DetailPage from "./Pages/DetailPage/DetailPage";
@@ -22,7 +21,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import Category from "./Pages/Category/Category";
 import SearchPage from "./Pages/SearchPage/SearchPage";
 import PayCartPage from "./Pages/PayCartPage/PayCartPage";
-import ThankYouPage from "./Pages/ThankYouPage/ThankYouPage.jsx";
+import ContactPage from "./Pages/Contact/Contact.jsx";
 
 // ////////////////////////FIREBASE///////////////////////////
 
@@ -76,14 +75,12 @@ const App = () => {
               <ContainerIndex setButtonState={ButtonState}></ContainerIndex>
               <ToastContainer />
               <Routes>
-                <Route path="/" element={<HomePage />} />
                 <Route
-                  path="/ProductsPage"
-                  element={<ProductsPage counterUp={counterUp} />}
+                  path="/"
+                  element={<ProductsPage/>}
                 />
-                <Route path="/ThankYouPage" element={<ThankYouPage />} />
                 <Route path="/PayCart" element={<PayCartPage />} />
-                <Route path="/Contact" element={<Contact />} />
+                <Route path="/Contact" element={<ContactPage />} />
                 <Route
                   path="/Detail/:id"
                   element={
