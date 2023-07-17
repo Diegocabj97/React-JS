@@ -15,28 +15,32 @@
 .BuyItem {
   display: flex;
   margin: auto;
-  width: 33%;
+  width: 100%;
   height: 33%;
   text-align: center;
   justify-content: center;
   padding: 10px;
-  border: 5px solid rgba(2, 2, 2, 0.397);
+  border-top: 5px solid rgba(0, 0, 0, 0.397);
   border-radius: 20px;
   margin-bottom: 10px;
+
+  font-weight: bold;
 }
 .BuyItem img {
-  max-width: 100px;
+  max-width: 100%;
   margin: 5px;
 }
 .BuyItem h3 {
   display: flex;
   font-size: 15px;
   align-items: center;
+  min-width: 20%;
 }
 .BuyItem p {
   display: flex;
   font-size: 15px;
   align-items: center;
+  margin: 100px;
 }
 .PayBtn {
   display: flex;
@@ -53,7 +57,7 @@
 }
 .BuyForm {
   margin: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 .App-dark .payCart {
   color: white;
@@ -71,3 +75,7 @@
   border-radius: 20px;
   margin-bottom: 10px;
 }
+.highlight {
+  background-color: rgba(255, 93, 93, 0.603);
+}
+

@@ -9,6 +9,16 @@ import {
 } from "../../Context/ProductsContext.jsx";
 
 const CardList = () => {
+  const ordenarCards = (ascendente) => {
+    const sortedCards = [...cards].sort((a, b) => {
+      if (ascendente) {
+        return a.precio - b.precio;
+      } else {
+        return b.precio - a.precio;
+      }
+    });
+    setCards(sortedCards);
+  };
   const { products, setProducts } = useContext(ProductsContext);
   return (
     <ProductsProvider>

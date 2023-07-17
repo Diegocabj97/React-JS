@@ -27,6 +27,17 @@
   animation: slideIn 0.3s ease-in-out;
   z-index: 1;
 }
+.CloseCartBtn {
+  width: 40px;
+  height: 30px;
+  color: red;
+  background-color: red;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.CartHeader {
+  display: flex;
+}
 .cart-total {
   display: flex;
   flex-direction: row;

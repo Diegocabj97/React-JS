@@ -6,6 +6,7 @@ import "./Category.css";
 import { Link } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
+import DropdownOrder from "../../Components/DropDownOrder/dropdownOrder";
 
 const Category = () => {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,7 @@ const Category = () => {
   });
   return (
     <div className="CategoryItems">
+      
       {filteredProducts.map((products) => {
         return (
           <Link to={`/detail/${products.id}`} key={products.id}>

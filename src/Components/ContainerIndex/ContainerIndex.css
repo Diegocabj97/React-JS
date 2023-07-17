@@ -10,6 +10,8 @@
   align-items: center;
   text-align: center;
   margin: auto;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
   width: 100%;
 }
 .containerIndex-light p {
