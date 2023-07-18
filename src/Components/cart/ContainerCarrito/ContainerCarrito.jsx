@@ -43,9 +43,8 @@ const ContainerCarrito = () => {
             justifyContent: "center",
             textAlign: "center",
             borderRadius: 5,
-            border: 1,
+            border: "1px solid",
             margin: "10px",
-            border: "solid",
             width: "100%",
           }}
         >
