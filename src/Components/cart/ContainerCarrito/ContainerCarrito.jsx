@@ -48,7 +48,7 @@ const ContainerCarrito = () => {
             width: "100%",
           }}
         >
-          El carrito esta vacio :({" "}
+          El carrito esta vacio :(
         </p>
         <CloseCartBtn />
       </div>
