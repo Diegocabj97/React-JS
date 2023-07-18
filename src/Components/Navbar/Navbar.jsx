@@ -88,7 +88,7 @@ const NavBarImport = ({
               <LinkContainer to="/Contact">
                 <Nav.Link className="NavItem">Contactanos</Nav.Link>
               </LinkContainer>
-              <Nav.Link className="NavItem">Soporte Técnico</Nav.Link>
+             
             </NavDropdown>
             <button
               className={buttonState ? "BtnLight" : "BtnDark"}
