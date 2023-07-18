@@ -7,7 +7,7 @@ const ErrorPage = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate("/");
-    }, 3000000);
+    }, 3000);
   }, [navigate]);
 
   return (
